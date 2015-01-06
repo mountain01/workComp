@@ -1,0 +1,27 @@
+#!/bin/bash
+# My first Script
+output="Default"
+branchName=
+
+function createBranch {
+	git pull;git checkout -b $branchName; git push -u origin $branchName
+}
+
+function rungit {
+	if [ "$1" != "" ]; then
+		branchName=$1; createBranch
+		else
+			echo "No branch name specified. Try again."
+			exit 1
+	fi
+
+}
+
+if [ -d .git ]; then
+	rungit $1
+else 
+	echo "No git repo found. Navigate to a project folder."
+ 	exit 0;
+fi
+
+

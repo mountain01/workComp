@@ -1,0 +1,99 @@
+Checking session consistency (brasero_burn_check_session_consistency brasero-burn.c:1739)
+BraseroBurnURI called brasero_job_get_action
+BraseroBurnURI called brasero_job_get_action
+BraseroBurnURI called brasero_job_set_output_size_for_current_track
+BraseroBurnURI stopping
+BraseroBurnURI called brasero_job_get_action
+BraseroBurnURI called brasero_job_get_session_output_size
+BraseroBurnURI output set (IMAGE) image = /tmp/brasero_tmp_9L2UQX.bin toc = none
+BraseroBurnURI called brasero_job_get_session_output_size
+BraseroBurnURI called brasero_job_get_action
+BraseroBurnURI called brasero_job_get_current_track
+BraseroBurnURI no burn:// URI found
+BraseroBurnURI stopping
+BraseroLocalTrack called brasero_job_get_action
+BraseroLocalTrack called brasero_job_get_action
+BraseroLocalTrack called brasero_job_set_output_size_for_current_track
+BraseroLocalTrack stopping
+BraseroLocalTrack called brasero_job_get_action
+BraseroLocalTrack called brasero_job_get_session_output_size
+BraseroLocalTrack output set (IMAGE) image = /tmp/brasero_tmp_H32UQX.bin toc = none
+BraseroLocalTrack called brasero_job_get_session_output_size
+BraseroLocalTrack called brasero_job_get_action
+BraseroLocalTrack called brasero_job_get_current_track
+BraseroLocalTrack no remote URIs
+BraseroLocalTrack stopping
+BraseroChecksumImage called brasero_job_get_current_track
+BraseroChecksumImage called brasero_job_get_action
+BraseroChecksumImage called brasero_job_get_flags
+BraseroChecksumImage called brasero_job_get_action
+BraseroChecksumImage called brasero_job_get_action
+BraseroChecksumImage called brasero_job_get_fd_in
+BraseroChecksumImage called brasero_job_set_output_size_for_current_track
+BraseroChecksumImage stopping
+BraseroChecksumImage called brasero_job_get_current_track
+BraseroChecksumImage called brasero_job_get_action
+BraseroChecksumImage called brasero_job_get_flags
+BraseroChecksumImage called brasero_job_get_action
+BraseroChecksumImage called brasero_job_get_session_output_size
+BraseroChecksumImage output set (IMAGE) image = /tmp/brasero_tmp_S41UQX.bin toc = none
+BraseroChecksumImage called brasero_job_get_session_output_size
+BraseroChecksumImage called brasero_job_get_action
+BraseroChecksumImage called brasero_job_get_action
+BraseroChecksumImage called brasero_job_get_current_track
+BraseroChecksumImage called brasero_job_get_input_type
+BraseroChecksumImage called brasero_job_set_current_action
+BraseroChecksumImage called brasero_job_get_fd_in
+BraseroChecksumImage called brasero_job_get_current_track
+BraseroChecksumImage called brasero_job_get_current_track
+BraseroChecksumImage Starting checksuming file /home/matt/Downloads/ubuntu-gnome-14.04.1-desktop-amd64.iso (size = 980418560)
+BraseroChecksumImage called brasero_job_get_fd_out
+BraseroChecksumImage called brasero_job_get_current_track
+BraseroChecksumImage Setting new checksum (type = 2) 31ac57691a45a381ded0ab2a3588b77a ((null) before)
+BraseroChecksumImage Finished track successfully
+BraseroChecksumImage stopping
+BraseroGrowisofs called brasero_job_get_action
+BraseroGrowisofs getting varg
+BraseroGrowisofs called brasero_job_get_action
+BraseroGrowisofs called brasero_job_get_current_track
+BraseroGrowisofs got varg:
+BraseroGrowisofs deactivating
+BraseroGrowisofs called brasero_job_get_action
+BraseroGrowisofs getting varg
+BraseroGrowisofs called brasero_job_get_action
+BraseroGrowisofs called brasero_job_get_flags
+BraseroGrowisofs called brasero_job_get_speed
+BraseroGrowisofs called brasero_job_get_device
+BraseroGrowisofs called brasero_job_get_action
+BraseroGrowisofs called brasero_job_get_session_output_size
+BraseroGrowisofs called brasero_job_get_current_track
+BraseroGrowisofs called brasero_job_get_fd_in
+BraseroGrowisofs called brasero_job_set_current_action
+BraseroGrowisofs got varg:
+	growisofs
+	-use-the-force-luke=notray
+	-use-the-force-luke=4gms
+	-dvd-compat
+	-speed=4
+	-use-the-force-luke=tracksize:478720
+	-use-the-force-luke=tty
+	-Z
+	/dev/sr0=/home/matt/Downloads/ubuntu-gnome-14.04.1-desktop-amd64.iso
+BraseroGrowisofs Launching command
+BraseroGrowisofs called brasero_job_get_fd_out
+BraseroGrowisofs called brasero_job_get_fd_in
+BraseroGrowisofs called brasero_job_get_fd_out
+BraseroGrowisofs stdout: Executing 'builtin_dd if=/home/matt/Downloads/ubuntu-gnome-14.04.1-desktop-amd64.iso of=/dev/sr0 obs=32k seek=0'
+BraseroGrowisofs called brasero_job_set_dangerous
+BraseroGrowisofs stderr: :-( more than 50% of space will be *wasted*!
+BraseroGrowisofs stderr:     use single layer media for this recording
+BraseroGrowisofs stderr: HUP
+BraseroGrowisofs stdout: HUP
+BraseroGrowisofs process finished with status 252
+BraseroGrowisofs called brasero_job_error
+BraseroGrowisofs finished with an error
+BraseroGrowisofs asked to stop because of an error
+	error		= 0
+	message	= "no message"
+BraseroGrowisofs stopping
+Session error : unknown (brasero_burn_record brasero-burn.c:2859)
