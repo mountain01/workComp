@@ -1,0 +1,89 @@
+When starting a new task:
+	In jira select the task you are about to work on.
+	At the bottom of the quick view (scrollable portion on the right side of the page) there is a button that says create branch. Click it.
+	A dialogue box will appear:
+		Select the correct repository for the task
+		Select the type (most often this will be feature or bugfix)
+		Select base branch, most often this will be dev
+		Click create branch
+	NOTE: This moves your task from To Do into In Progress
+
+After creating new branch for task:
+	Navigate to the correct file path in a terminal/command prompt window
+	Run the following Git commands:
+		git fetch
+		optional command to find correct branch:
+			git branch -a
+		git checkout <branch name>
+	You are now able to start work for your task.
+
+While working on your task:
+	**COMMIT OFTEN**
+	**You are on your own branch so it won't matter how often you commit your changes, it doesn't affect others' work.**
+	If any new files have been created:
+		git add -A
+	When you feel that you are at a stable position and want to save your code use this command:
+		git commit -am "<type>(<scope>): <subject>"
+			using these guidelines - https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#-git-commit-guidelines
+			-- These are the guidelines that are familiar to others in our department and make it easier to understand quickly what your commit does
+		git push
+
+When you're finished with your task:
+	Commit it and push it:
+		git commit -am "<type>(<scope>): <subject>"
+			using these guidelines - https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#-git-commit-guidelines
+		git push
+	Navigate to the project in Stash
+	Go to the branches page and click on your branch
+	In the top section make sure that your branch is on top and the source branch is on the bottom.
+	Click on the 'Diff' tab to make sure that all of your changes are there
+	Click on 'Create pull request'
+	Add reviewers, usually your entire team. This will send them an email saying that there is a pull request that they need to look at.
+	Tell your team that you have a request for them to look at. Don't take it personal when recommendations are made.
+
+When a team member has a pull request:
+	Log into stash
+	If you have been marked as a reviewer:
+		In the top right corner next to your profile picture there should be a drawer icon with a number saying how many open pull requests there are that you have been marked as a reviewer for
+		Click on a pull request
+	If you have not been marked as a reviewer:
+		On the left side of the page the pull request icon should have a number displaying the number of open pull requests, click it
+		Click on a pull request
+
+	Reviewing the pull request:
+		Click on the 'Diff' tab
+		The left pane shows the changed files, green means its a new file, red and crossed out means deleted file, blue means changed file
+		The right pane shows the changes, you can view the changes side-by-side or unified, depending on your preferences
+
+		If you have issues with the code as you review it:
+			comment on the offending line of code and let your team member know so they can fix it
+
+		To comment on a line:
+			When hovering over a line an icon will appear on the left, click it
+			If you want to send an email to the person type @<person>
+			Add your comment and click 'Comment'
+
+		If you are ok with the changes:
+			Click on the 'Approve' button at the top right of the page
+
+If someone has issues with your pull request
+	Address their concerns and make any necessary changes on your branch
+	Commit and Push:
+		git commit -am "<type>(<scope>): <subject>"
+			using these guidelines - https://github.com/angular/angular.js/blob/master/CONTRIBUTING.md#-git-commit-guidelines
+		git push
+	After you push it will update your current pull request.
+	Let your team know that you fixed their concerns.
+
+After your pull request is merged:
+	git checkout <base branch> 	(usually dev)
+	git branch -D <old branch> 	(removes the branch you were working on)
+	git remote prune origin		(removes -prunes- any remaining semblances of the branch you were working on in the repository)
+
+If there are changes that you need on the base branch:
+	git stash (stores any changes that you have locally on a stack)
+	git checkout <base branch> (usually dev)
+	git pull
+	git checkout <your branch>
+	git merge <base branch> (puts any changes from the base branch onto your)
+	git stash pop
